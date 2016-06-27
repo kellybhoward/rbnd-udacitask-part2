@@ -1,13 +1,34 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+    I chose Rainbow. The reason I chose Rainbow was mostly to make the interface come alive a bit more.
+    Colorize is a neat gem, but Rainbow has more features to make the terminal view of program more enjoyable.
+
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+    a) Feature 1...Delete Multiple items
+        list method delete can now take multiple arguments
+    b) Feature 2...Update priority
+        list items of todo type can have priority updated
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+    ~2 hours
+
 2. What was the most rewarding challenge you conquered?
+    Using new gems
+
 3. What two additional features did you build? Why?
+    Delete Multiple items
+        I altered the list delete method to take in any number of parameters.
+        Since the index of the item might change if you delete an item from the front of the list,
+        I sorted and reversed the indices array to account for that problem.
+
+    Update priority
+        I added an update priority method that allows todo items to have their priority changed
+        as long as it's a valid priority option. It's only available for todo type items.
+        Because of that, I added another error, ItemDoesntHaveMethod that displays the string
+        "That item cannot do that action"
+
 4. Where do you still have room to grow?
+    Using better Ruby logic for my conditionals - I know they're still more clunky than they need to be.

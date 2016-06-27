@@ -5,7 +5,7 @@ class UdaciList
         if options[:title]
             @title = options[:title]
         else
-            @title = Rainbow("Untitled List").background(:red)
+            @title = Rainbow("Untitled List").background(:red).bright
         end
         @items = []
     end

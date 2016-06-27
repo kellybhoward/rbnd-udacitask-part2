@@ -1,7 +1,7 @@
 module Listable
     # Listable methods go here
     def format_description(description)
-        Rainbow("#{description}".ljust(30)).green
+        Rainbow("#{description}".ljust(30)).green.bright
     end
     def format_date(*d)
         dates = d[0].strftime("%D") if d[0]
@@ -17,6 +17,6 @@ module Listable
         return value
     end
     def format_type(type)
-        Rainbow("{#{type}}".ljust(8)).yellow
+        Rainbow("{#{type}}".ljust(8)).yellow.blink
     end
 end
