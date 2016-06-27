@@ -16,17 +16,27 @@ list.add("todo", "Buy groceries", priority: "high")
 list.add("event", "Birthday Party", start_date: "2016-05-08")
 list.add("event", "Vacation", start_date: "2016-05-28", end_date: "2016-05-31")
 list.add("link", "https://github.com", site_name: "GitHub Homepage")
+
+puts
+puts "Here is the inital list for testing:"
 list.all
 list.delete(3)
+puts
+puts "This is the list after #3 was deleted"
 list.all
 
-# Testing deleting multiple items
+puts
+puts "Showing the list after deleting two items at once, #1 and #3"
 list.delete(1,3) #DONE
 list.all
 
-# Testing new update priority feature for to-do items
+puts
+puts "Updated priority for #1 from nothing to medium"
 list.update_priority(1,'medium') #DONE
+list.all
 
+puts
+puts "There's a commented out string here to test the new Error message if you call update_priority on a non-todo item"
 # list.update_priority(2,'low') # Testing Error message if the item doesn't have that action ability
 
 # SHOULD CREATE AN UNTITLED LIST AND ADD ITEMS TO IT
@@ -49,8 +59,12 @@ new_list.add("link", "http://ruby-doc.org")
 
 # DISPLAY UNTITLED LIST
 # ---------------------
+puts
+puts "Here's an untitled list with 8 items, 3 types of items"
 new_list.all
 
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
+puts
+puts "This is the same list using the filter method to show only event items"
 new_list.filter("event")
