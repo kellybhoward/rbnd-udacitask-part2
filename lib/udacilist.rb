@@ -2,7 +2,11 @@ class UdaciList
     attr_reader :title, :items
 
     def initialize(options={})
-        @title = options[:title]
+        if options[:title]
+            @title = options[:title]
+        else
+            @title = Rainbow("Untitled List").background(:red)
+        end
         @items = []
     end
     def add(type, description, options={})
@@ -27,9 +31,9 @@ class UdaciList
         end
     end
     def all
-        puts "-" * @title.length
+        puts "-" * 30
         puts @title
-        puts "-" * @title.length
+        puts "-" * 30
         @items.each_with_index do |item, position|
             puts "#{position + 1}) #{item.details}"
         end
