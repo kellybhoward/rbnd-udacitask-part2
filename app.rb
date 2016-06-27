@@ -20,6 +20,15 @@ list.all
 list.delete(3)
 list.all
 
+# Testing deleting multiple items
+list.delete(1,3) #DONE
+list.all
+
+# Testing new update priority feature for to-do items
+list.update_priority(1,'medium') #DONE
+
+# list.update_priority(2,'low') # Testing Error message if the item doesn't have that action ability
+
 # SHOULD CREATE AN UNTITLED LIST AND ADD ITEMS TO IT
 # --------------------------------------------------
 new_list = UdaciList.new # Should create a list called "Untitled List"
@@ -44,4 +53,4 @@ new_list.all
 
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
-# new_list.filter("event")
+new_list.filter("event")

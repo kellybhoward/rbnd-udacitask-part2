@@ -16,4 +16,7 @@ module Listable
         value = "" if !priority
         return value
     end
+    def format_type(type)
+        Rainbow("{#{type}}".ljust(8)).yellow
+    end
 end
